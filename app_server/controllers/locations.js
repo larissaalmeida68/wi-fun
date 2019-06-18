@@ -4,26 +4,26 @@ module.exports.homelist = function(req, res) {
         title: 'Wi-fun',
         pageHeader: {
             title: 'Wi-fun',
-            strapline: 'Find places to work with wifi near you!'
+            strapline: 'Encontre lugares com wi-fi perto de você!'
         },
-        sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
+        sidebar: "Buscando wi-fi e cadeira? Wi-fun te ajuda a encontrar lugares para trabalhar. Quer cerveja, bolo ou café? Deixa que a gente te ajuda.",
         locations: [{
-            name: 'Starcups',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Boken Café',
+            address: 'Av. Tancredo Neves, 1110 - Parque 10 de Novembro, Manaus - AM, 69055-010',
             rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            facilities: ['Bebidas quentes', 'Comida', 'Wifi'],
             distance: '100m'
         }, {
-            name: 'Cafe Hero',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Morada Café',
+            address: 'Av. Via Láctea, 10 - Aleixo, Manaus - AM, 69060-085',
             rating: 4,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            facilities: ['Bebidas quentes', 'Comida', 'Wifi'],
             distance: '200m'
         }, {
-            name: 'Burger Queen',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Do Futuro Café',
+            address: 'Av. Pedro Teixeira, 351 - Dom Pedro, Manaus - AM, 69040-000',
             rating: 2,
-            facilities: ['Food', 'Premium wifi'],
+            facilities: ['Bebidas quentes', 'Comida', 'Wifi'],
             distance: '250m'
         }]
     });
@@ -32,47 +32,47 @@ module.exports.homelist = function(req, res) {
 /* GET 'Location info' page */
 module.exports.locationInfo = function(req, res) {
     res.render('location-info', {
-        title: 'Starcups',
+        title: 'Boken Café',
         pageHeader: {
-            title: 'Starcups'
+            title: 'Boken Café'
         },
         sidebar: {
-            context: 'is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
-            callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
+            context: 'está no Wi-fun por ter espaço acessível para se sentar com o seu laptop e fazer algum trabalho.',
+            callToAction: 'Se você já foi e gostou, ou não, por favor, deixe um comentário para ajudar outras pessoas como você.'
         },
         location: {
-            name: 'Starcups',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Boken Café',
+            address: 'Av. Tancredo Neves, 1110 - Parque 10 de Novembro, Manaus - AM, 69055-010',
             rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            facilities: ['Bebidas quentes', 'Comida', 'Wifi'],
             coords: {
-                lat: 51.455041,
-                lng: -0.9690884
+                lat: -3.455041,
+                lng: -60.9690884
             },
             openingTimes: [{
-                days: 'Monday - Friday',
+                days: 'Segunda - Sexta',
                 opening: '7:00am',
                 closing: '7:00pm',
                 closed: false
             }, {
-                days: 'Saturday',
+                days: 'Sábado',
                 opening: '8:00am',
                 closing: '5:00pm',
                 closed: false
             }, {
-                days: 'Sunday',
+                days: 'Domingo',
                 closed: true
             }],
             reviews: [{
-                author: 'Simon Holmes',
+                author: 'Larissa Almeida',
                 rating: 5,
-                timestamp: '16 July 2013',
-                reviewText: 'What a great place. I can\'t say enough good things about it.'
+                timestamp: '16 Janeiro 2019',
+                reviewText: 'Uma das agradáveis novidades... Ambiente diferenciado, bom atendimento, comida deliciosa. Bem movimentado. Às vezes um pouco de espera por Mesa é necessaria.'
             }, {
                 author: 'Charlie Chaplin',
                 rating: 3,
-                timestamp: '16 June 2013',
-                reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
+                timestamp: '16 Fevereiro 2019',
+                reviewText: 'ótima opção para refeições, muito sabor e preço acessível e tem opções de lanche rápido também. ambiente agradável e bom atendimento. Wi-fi excelente!'
             }]
         }
     });
@@ -81,9 +81,9 @@ module.exports.locationInfo = function(req, res) {
 /* GET 'Add review' page */
 module.exports.addReview = function(req, res) {
     res.render('location-review-form', {
-        title: 'Review Starcups on Loc8r',
+        title: 'Review Boken Café no Wi-fun',
         pageHeader: {
-            title: 'Review Starcups'
+            title: 'Review Boken Café'
         }
     });
 };
