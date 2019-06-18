@@ -14,7 +14,7 @@ block content
           p= location.address
           .panel.panel-primary
             .panel-heading
-              h2.panel-title Opening hours
+              h2.panel-title Horário de Funcionamento
             .panel-body
               each time in location.openingTimes
                 p
@@ -25,7 +25,7 @@ block content
                     | #{time.opening} - #{time.closing}
           .panel.panel-primary
             .panel-heading
-              h2.panel-title Facilities
+              h2.panel-title Facilidades
             .panel-body
               each facility in location.facilities
                 span.label.label-warning
@@ -35,15 +35,15 @@ block content
         .col-xs-12.col-sm-6.location-map
           .panel.panel-primary
             .panel-heading
-              h2.panel-title Location map
+              h2.panel-title Mapa
             .panel-body
               img.img-responsive.img-rounded(src="http://maps.googleapis.com/maps/api/staticmap?center=#{location.coords.lat},#{location.coords.lng}&zoom=17&size=400x350&sensor=false&markers=#{location.coords.lat},#{location.coords.lng}&scale=2")
       .row
         .col-xs-12
           .panel.panel-primary.review-panel
             .panel-heading
-              a.btn.btn-default.pull-right(href="/location/review/new") Add review
-              h2.panel-title Customer reviews
+              a.btn.btn-default.pull-right(href="/location/review/new") Comentar
+              h2.panel-title Comentários de Clientes
             .panel-body.review-container
               each review in location.reviews
                 .row
